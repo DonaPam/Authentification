@@ -1,0 +1,6 @@
+# Production paths are normally configured through equivalent environment variables.
+# SECURITY_ACCESS_HOME=/var/lib/security-access
+# SECURITY_ACCESS_DATA_ROOT=/var/lib/security-access/confidential-data
+# SECURITY_ACCESS_DATABASE=/var/lib/security-access/authorization.db
+# SECURITY_ACCESS_LOG=/var/log/security-access/audit.jsonl
+# Do not set SECURITY_ACCESS_TEST_SIDECAR in production: Linux xattrs are mandatory.

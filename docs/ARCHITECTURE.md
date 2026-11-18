@@ -85,8 +85,9 @@ Authentification/
     └── security-access.example.toml
 ```
 
-Only `README.md` and this architecture document are created in the first phase.
-The other entries specify the planned implementation layout.
+The implementation now provides this layout. The `service.py` module exposes the
+Linux peer-credential primitive for a separate service-process deployment; the
+interactive command shell uses the same application API for local operation.
 
 ## 4. Modules and interactions
 

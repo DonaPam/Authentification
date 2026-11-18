@@ -1,0 +1,19 @@
+[Unit]
+Description=Security Access System
+After=network.target
+
+[Service]
+Type=simple
+User=securityaccess
+Group=securityaccess
+Environment=SECURITY_ACCESS_HOME=/var/lib/security-access
+Environment=SECURITY_ACCESS_LOG=/var/log/security-access/audit.jsonl
+WorkingDirectory=/opt/security-access-system
+ExecStart=/usr/bin/python3 -m security_access
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/var/lib/security-access /var/log/security-access
+
+[Install]
+WantedBy=multi-user.target
